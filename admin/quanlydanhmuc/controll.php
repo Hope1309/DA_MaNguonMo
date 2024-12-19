@@ -19,7 +19,8 @@ if (isset($_POST['btnAdd'])) {
                 exit();
             }
 
-            // Proceed to add the category
+        //them danh muc vao csdl
+
             $sql_add = "INSERT INTO tbl_categories (name) VALUES (:name)";
             $stmt = $pdo->prepare($sql_add);
             $stmt->bindParam(':name', $tenDanhmuc, PDO::PARAM_STR);
@@ -35,7 +36,8 @@ if (isset($_POST['btnAdd'])) {
     } else {
         echo "Vui lòng nhập tên danh mục!";
     }
-} elseif (isset($_POST['btnEdit'])) {
+}
+ elseif (isset($_POST['btnEdit'])) {
     $tenDanhmuc = trim($_POST['suaDanhmuc']); // Trim to avoid unnecessary spaces
     $idDanhmuc = $_GET['idDanhmuc'];
 
