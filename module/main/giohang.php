@@ -23,7 +23,7 @@ if (!isset($_SESSION['cart'])) {
 // }
 
 // $cart = $_SESSION['cart'];
-
+//xu ly bug
 // Xử lý xóa sản phẩm khỏi giỏ hàng
 if (isset($_GET['idxoasp'])) {
     $id = $_GET['idxoasp'];
